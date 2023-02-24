@@ -1,0 +1,2 @@
+hello: <class 'ValueError'>
+bye: <class 'NameError'>
