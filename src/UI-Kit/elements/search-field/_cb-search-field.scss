@@ -1,0 +1,120 @@
+.cb {
+    &-search-field {
+        display: block;
+        &.is {
+            &-error {};
+            &-focus {};
+            &-disabled {};
+        }
+        &__label {
+            color: $summer-night;
+            display: block;
+            font-weight: 400;
+            font-family: 'Lato', 'Arial', sans-serif;
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: math.div($base-gutter, 2);
+            @media (max-width: $mobile-width) {
+                font-weight: 700;
+            }
+        }
+        &__field {
+            background-color: $input;
+            border: 2px solid transparent;
+            border-radius: math.div($base-gutter, 2);
+            box-sizing: border-box;
+            display: grid;
+            height: $base-gutter * 6.5;
+            grid-template-columns: 1fr;
+            position: relative;
+            .is-focus & {
+                border: 2px solid $divider;
+            }
+            .is-error & {
+                background-color: $petalo-rosa;
+            }
+        }
+        &__input {
+            background-color: transparent;
+            border: none;
+            box-sizing: border-box;
+            color: $summer-night;
+            font-weight: 400;
+            font-family: 'Lato', 'Arial', sans-serif;
+            font-size: 16px;
+            height: 100%;
+            line-height: 24px;
+            margin: 0;
+            padding: 0;
+            padding: $base-gutter * 1.5 $base-gutter * 12 $base-gutter * 1.5 $base-gutter * 1.75;
+            width: 100%;
+            &:focus {
+                outline: none;
+                .is-disabled & {
+                    pointer-events: none;
+                }
+            }
+        }
+        &__group-icon {
+            display: flex;
+            flex-direction: row-reverse;
+            position: absolute;
+            right: $base-gutter * 1.75;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &__item {
+            & + & {
+                margin-right: $base-gutter * 3.25;
+            }
+            & + &::after {
+                content: "";
+                background-color: $blu-selvaggio;
+                border-radius: 6px;
+                cursor: default;
+                height: 100%;
+                position: absolute;
+                right: $base-gutter * -1.75;
+                width: math.div($base-gutter,4);
+            }
+        }
+        &__helper {
+            color: $active-item;
+            cursor: pointer;
+            display: inline-block;
+            font-weight: 400;
+            font-family: 'Lato', 'Arial', sans-serif;
+            font-size: 14px;
+            line-height: 20px;
+            margin-top: $base-gutter;
+            text-decoration: none;
+        }
+        &__error-message {
+            display: block;
+            font-weight: 400;
+            font-family: 'Lato', 'Arial', sans-serif;
+            font-size: 14px;
+            line-height: 20px;
+            .is-error & {
+                color: $tela-rossa;
+                margin: 0;
+                margin-top: $base-gutter;
+            }
+        }
+    }
+    &-icon {
+        &.is {
+            &-loading {}
+        }
+        &-search {
+            background-image: url("data:image/svg+xml,%3Csvg width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M18.3149 10.5C18.3149 14.366 15.1809 17.5 11.3149 17.5C7.44895 17.5 4.31494 14.366 4.31494 10.5C4.31494 6.63401 7.44895 3.5 11.3149 3.5C15.1809 3.5 18.3149 6.63401 18.3149 10.5ZM16.7717 17.0174C15.2953 18.2549 13.3921 19 11.3149 19C6.62052 19 2.81494 15.1944 2.81494 10.5C2.81494 5.80558 6.62052 2 11.3149 2C16.0094 2 19.8149 5.80558 19.8149 10.5C19.8149 12.5772 19.0699 14.4803 17.8324 15.9568L23.3453 21.4697C23.6382 21.7626 23.6382 22.2374 23.3453 22.5303C23.0524 22.8232 22.5775 22.8232 22.2846 22.5303L16.7717 17.0174Z' fill='%230D4CD3'/%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            color: $gosblue;
+            .is-loading  & {
+                background-image: url("data:image/svg+xml, %3Csvg viewBox='0 0 24 24' width='24' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle r='10' cx='12' cy='12' fill='none' stroke='%23ddd' stroke-width='4' stroke-linecap='round'%3E%3C/circle%3E%3Ccircle class='wow' r='10' cx='12' cy='12' fill='none' stroke='%231D5DEB' stroke-width='4' stroke-linecap='round' stroke-dasharray='31.4 31.4'%3E%3Canimate attributeName='stroke-dashoffset' repeatCount='indefinite' dur='16s' values='314;0' /%3E%3C/circle%3E%3C/svg%3E ");
+            }
+        }
+    }
+}

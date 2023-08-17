@@ -1,0 +1,95 @@
+.cb-email-field {
+    display: block;
+    &.is {
+        &-error {};
+        &-focus {};
+        &-disabled {};
+    }
+    &__label {
+        color: $summer-night;
+        display: block;
+        font-weight: 400;
+        font-family: 'Lato', 'Arial', sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: math.div($base-gutter, 2);
+    }
+    &__field {
+        background-color: $input;
+        border: 2px solid transparent;
+        border-radius: math.div($base-gutter, 2);
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 1fr;
+        position: relative;
+        .is-error & {
+            background-color: $petalo-rosa;
+        }
+        .is-focus & {
+            border: 2px solid $divider;
+        }
+    }
+    &__input {
+        background-color: transparent;
+        border: none;
+        box-sizing: border-box;
+        font-weight: 400;
+        font-family: 'Lato', 'Arial', sans-serif;
+        font-size: 16px;
+        height: 100%;
+        line-height: 24px;
+        margin: 0;
+        padding: 0;
+        padding: $base-gutter * 1.5 $base-gutter * 1.75;
+        width: 100%;
+        &:focus {
+            outline: none;
+            .is-disabled & {
+                pointer-events: none;
+            }
+        }
+    }
+    &__group-icon {
+        display: flex;
+        flex-direction: row-reverse;
+        position: absolute;
+        right: $base-gutter * 1.75;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &__item {
+        & + & {
+            margin-right: $base-gutter * 3.25;
+        }
+        & + &::after {
+            content: "";
+            background-color: $blu-selvaggio;
+            border-radius: $base-gutter * 0.75;
+            cursor: default;
+            height: 100%;
+            position: absolute;
+            right: $base-gutter * -1.75;
+            width: math.div($base-gutter, 4);
+        }
+    }
+    &__helper {
+        color: $active-item;
+        cursor: pointer;
+        display: inline-block;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: $base-gutter;
+        text-decoration: none;
+    }
+    &__error-message {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        .is-error & {
+            color: $tela-rossa;
+            margin: 0;
+            margin-top: $base-gutter;
+        }
+    }
+}

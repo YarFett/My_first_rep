@@ -1,0 +1,32 @@
+//Size ----------
+$container-padding: 72px;
+$container-width: 1360px;
+
+// Color --------------
+$background: #FAFCFF;
+$summer-night: #0B1F33;
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+html {
+  height: 100%;
+}
+
+body {
+  min-width: 320px;
+  background-color: $background;
+  color: $summer-night;
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+}

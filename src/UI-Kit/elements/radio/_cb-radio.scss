@@ -1,0 +1,119 @@
+.cb-radio {
+    display: flex;
+    &.is {
+        &-checked {};
+        &-disabled {};
+        &-focus {};
+        &-hover {};
+    }
+    &__field {
+        color: $summer-night;
+        cursor: pointer;
+        display: flex;
+        justify-content: flex-start;
+        position: relative;
+        .is-disabled & {
+            pointer-events: none;
+        }
+    }
+    &__flag {
+        background-color: $white;
+        box-sizing: border-box;
+        border-radius: math.div($base-gutter,2);
+        border: 2px solid $gosblue;
+        border-radius: 50%;
+        cursor: pointer;
+        display: block;
+        font-size: 0;
+        height: $base-gutter * 3;
+        padding: $base-gutter * 0.25;
+        width: $base-gutter * 3;
+        .is-checked & {
+            background-color: $white;
+            border-color: $gosblue;
+            &::after {
+                content: "";
+                background-color: $gosblue;
+                border-radius: 50%;
+                border: 1px solid $white;
+                box-sizing: border-box;
+                height: $base-gutter * 2;
+                position: absolute;
+                width: $base-gutter * 2;
+            }
+        }
+        .is-checked.is-disabled & {
+            border-color: $telegrey-scuro;
+            background-color: $bg-disable;
+            &::after {
+                background-color: $telegrey-scuro;
+                border-color: $bg-disable;
+            }
+        }
+        .is-disabled & {
+            background-color:$bg-disable;
+            border-color: $telegrey-scuro;
+        }
+        .is-hover & {
+            background-color: $pervinca;
+            border-color: $active-item;
+        }
+        .is-hover.is-checked & {
+            &::after {
+                background-color: $active-item;
+            }
+            border-color: $active-item;
+            background-color: $white;
+        }
+    }
+    &__label {
+        display: block;
+        font-weight: 400;
+        font-family: 'Lato', 'Arial', sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        margin-left: $base-gutter * 2;
+    }
+    &__input {
+        border: 0;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+        white-space: nowrap;
+    }
+    &-group {
+        display: flex;
+        flex-direction: column;
+        &__title {
+            color: $summer-night;
+            display: block;
+            font-weight: 400;
+            font-family: 'Lato', 'Arial', sans-serif;
+            font-size: 16px;
+            line-height: 24px;
+            margin: 0;
+        }
+        &__helper {
+            color: $text-helper;
+            display: block;
+            font-weight: 400;
+            font-family: 'Lato', 'Arial', sans-serif;
+            font-size: 14px;
+            line-height: 20px;
+            margin: 0;
+            margin-bottom: $base-gutter * 1.5;
+        }
+        &__list {
+            display: flex;
+            flex-direction: column;
+        }
+        &__item {
+            & + & { margin-top: $base-gutter * 1.5; };
+        }
+    }
+}

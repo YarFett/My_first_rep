@@ -1,0 +1,141 @@
+@import "../../UI-Kit/variables/cb-variables";
+.requirements {
+  display: block;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: $base-gutter * 152;
+    padding-top: $base-gutter * 12;
+    row-gap: $base-gutter * 6;
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    row-gap: $base-gutter * 4;
+    &-row {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+    &-link {
+      align-self: flex-start;
+      align-items: center;
+      color: $gosblue;
+      cursor: pointer;
+      column-gap: $base-gutter;
+      display: flex;
+      text-decoration: none;
+    }
+  }
+  &__link-back {
+    box-sizing: border-box;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.47115 11.4695L13.9711 6L15.0289 7.06361L10.0636 12.0013L15.0289 16.9389L13.9711 18.0025L8.47115 12.5331C8.32959 12.3923 8.25 12.2009 8.25 12.0013C8.25 11.8016 8.32959 11.6102 8.47115 11.4695Z' fill='%230D4CD3'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    color: $gosblue;
+    padding-left: $base-gutter * 3;
+    text-decoration: none;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    top: -$base-gutter * 6;
+  }
+  &__title {
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px;
+    margin: 0;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    margin-left: -$base-gutter * 4;
+    margin-right: -$base-gutter * 4;
+    padding: 0;
+  }
+  &__item {
+    align-items: center;
+    column-gap: $base-gutter * 4;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 1fr auto $base-gutter * 3;
+    padding: $base-gutter * 2 $base-gutter * 4;
+    transition: all 0.2s ease-out;
+    &:hover {
+      background-color: $white;
+      box-shadow: 0px 1px 4px #E3EBFC, 0px 24px 48px rgba(230, 235, 245, 0.4);
+      border-radius: $base-gutter * 1.5;
+      .requirements__item-col:last-child {
+        display: flex;
+      }
+    }
+    &-col {
+      display: flex;
+      flex-direction: column;
+      row-gap: $base-gutter;
+      &:first-child {
+        align-self: start;
+      }
+      &:last-child {
+        color: $gosblue;
+        display: none;
+      }
+    }
+    &-info {
+      color: $text-helper;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      margin: 0;
+    }
+    &-title {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0;
+    }
+    &-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $base-gutter * 2;
+      max-width: $base-gutter * 88;
+    }
+  }
+  &__form {
+    &-item {
+      display: flex;
+      flex-direction: column;
+      row-gap: $base-gutter * 2;
+    }
+    &-row {
+      align-items: center;
+      column-gap: $base-gutter * 3;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      &:first-child {
+        & > *:last-child {
+          padding-top: $base-gutter * 3;
+        }
+      }
+      &.is-full-width {
+        grid-template-columns: 1fr;
+      }
+    }
+    &-group {
+      display: flex;
+      flex-direction: column;
+      row-gap: $base-gutter * 1.5;
+      &-title {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        margin: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@import "../../UI-Kit/variables/cb-variables";
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  row-gap: $base-gutter * 2;
+  &__card {
+    align-items: end;
+    box-shadow: 0 1px 4px #E3EBFC, 0 24px 48px rgba(230, 235, 245, 0.4);
+    background-color: $white;
+    border-radius: $base-gutter * 1.5;
+    //gap: 16px;
+    //display: flex;
+    //flex-direction: column;
+    //box-sizing: border-box;
+    //column-gap: $base-gutter * 11;
+    //display: grid;
+    //grid-template-columns: 1fr auto;
+    padding: $base-gutter * 3;
+  }
+  &__item {
+    column-gap: $base-gutter * 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  &__header {
+    justify-content: start;
+    align-items: center;
+  }
+  &__heading {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 0;
+  }
+  &__btn {
+    padding: 0;
+    color: #0D4CD3;
+    border: none;
+    background: transparent;
+  }
+  &__search {
+    width: 100%;
+  }
+  &__tags {
+    border-top: 1px solid $pervinca;
+    column-gap: $base-gutter * 2;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 $base-gutter * 3;
+    //margin-left: $base-gutter * 3;
+    //margin-right: $base-gutter * 3;
+    padding-top: 32px;
+    //padding: $base-gutter * 2 0;
+    row-gap: $base-gutter;
+  }
+}

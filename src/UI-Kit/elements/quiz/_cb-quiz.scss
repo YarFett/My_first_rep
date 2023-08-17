@@ -1,0 +1,78 @@
+.cb {
+    &-quiz {
+        &.is {
+            &-disabled {};
+        }
+        background-color: $white;
+        border-radius: $base-gutter * 1.5;
+        box-sizing: border-box;
+        box-shadow: 0px 1px 4px #E3EBFC, 0px 24px 48px rgba(230, 235, 245, 0.4);
+        color: $gosblue;
+        display: block;
+        font-family: 'Lato', 'Arial', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        padding: $base-gutter * 3 $base-gutter * 4;
+        text-decoration: none;
+        width: 100%;
+        @media (max-width: $mobile-width) {
+            padding: $base-gutter * 2;
+        }
+        &:hover {
+            background-color: $azzurro-alice;
+        }
+        &.is-disabled {
+            background-color: $pervinca;
+            color: $telegrey-scuro;
+            pointer-events: none;
+            user-select: none;
+        }
+        &:active {
+            background-color: rgba($gosblue, 0.18);
+        }
+        &__title {
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+            word-break: break-word;
+        }
+        &__subtitle {
+            color: $text-helper;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            margin: 0;
+            margin-top: $base-gutter;
+            word-break: break-word;
+            .is-disabled & {
+                color: $telegrey-scuro;
+            }
+        }
+        &__list {
+            list-style-type: disc;
+            margin-top: $base-gutter * 0.5;
+            margin-bottom: 0;
+            padding-left: $base-gutter * 3;
+        }
+        &__item {
+            box-sizing: border-box;
+            color: $text-helper;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            margin: 0;
+        }
+    }
+    &-icon {
+        &.is {
+            &-disabled {};
+        }
+        &-quiz {
+            margin-left: $base-gutter;
+            .is-disabled & {
+                color: $telegrey-scuro;
+            }
+        }
+    }
+}

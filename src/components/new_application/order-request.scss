@@ -1,0 +1,80 @@
+@import "../../UI-Kit/variables/cb-variables";
+
+.order-request {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: $base-gutter * 18 0;
+  padding-bottom: $base-gutter * 5;
+  position: relative;
+  row-gap: $base-gutter * 8;
+  width: 100%;
+  &__container {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      padding-bottom: $base-gutter * 5;
+      row-gap: $base-gutter * 9;
+      width: $base-gutter * 152;
+  }
+  &__header {
+    align-self: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    row-gap: $base-gutter * 3;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    margin: 0;
+  }
+  &__link-back {
+    box-sizing: border-box;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.47115 11.4695L13.9711 6L15.0289 7.06361L10.0636 12.0013L15.0289 16.9389L13.9711 18.0025L8.47115 12.5331C8.32959 12.3923 8.25 12.2009 8.25 12.0013C8.25 11.8016 8.32959 11.6102 8.47115 11.4695Z' fill='%230D4CD3'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    color: $gosblue;
+    padding-left: $base-gutter * 3;
+    text-decoration: none;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    top: -$base-gutter * 6;
+  }
+  &__banner {
+    box-sizing: border-box;
+    border: 2px dashed  $bg-disable;
+    background-image: url("../../img/icon__banner.svg");
+    background-position: center top $base-gutter * 4;
+    background-repeat: no-repeat;
+    border-radius: $base-gutter * 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: $base-gutter * 40;
+    padding: $base-gutter * 4;
+    width: 100%;
+    &-text {
+      align-self: center;
+      color: $summer-night;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      margin: 0;
+      margin-bottom: $base-gutter;
+      &-helper {
+        align-self: center;
+        color: $text-helper;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0;
+      }
+    }
+}
+}

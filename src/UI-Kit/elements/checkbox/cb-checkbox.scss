@@ -1,0 +1,134 @@
+@import "../../../UI-Kit/variables/_cb-variables.scss";
+
+.cb-checkbox {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    &.is {
+        &-checked {};
+        &-disabled {};
+        &-error {};
+        &-focus {};
+        &-hover {};
+    }
+    &__field {
+        color: $summer-night;
+        display: flex;
+        justify-content: flex-start;
+        position: relative;
+        .is-disabled & {
+            pointer-events: none;
+        }
+    }
+    &__flag {
+        background-color: $white;
+        box-sizing: border-box;
+        border-radius: calc($base-gutter / 2);
+        border: 2px solid $active-item;
+        cursor: pointer;
+        display: block;
+        font-size: 0;
+        flex-shrink: 0;
+        height: $base-gutter * 3;
+        padding: 2px;
+        width: $base-gutter * 3;
+        .is-checked & {
+            background-color: $white;
+            border-color: $gosblue;
+            &::after {
+                content: "";
+                background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='15' height='15' rx='1.5' fill='%230D4CD3' stroke='white'/%3E%3Cpath d='M3.99942 7.59823L7.27718 10.876L12.8754 5.27776' stroke='white'/%3E%3C/svg%3E%0A");
+                border-radius: 2px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: 50%;
+                border-radius: 2px;
+                height: $base-gutter * 2;
+                position: absolute;
+                width: $base-gutter * 2;
+            }
+        }
+        .is-checked.is-disabled & {
+            border-color: $telegrey-scuro;
+            background-color: $bg-disable;
+            &::after {
+                background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='15' height='15' rx='1.5' fill='%2386909C' stroke='%23D1D5DF'/%3E%3Cpath d='M3.99942 7.59823L7.27718 10.876L12.8754 5.27776' stroke='%23D1D5DF'/%3E%3C/svg%3E%0A");
+                background-color: $telegrey-scuro;
+            }
+        }
+        .is-disabled & {
+            background-color:$bg-disable;
+            border-color: $telegrey-scuro;
+        }
+        .is-error & {
+            background-color: $error-highlight;
+            border-color: $gosred;
+        }
+        .is-hover & {
+            background-color: $pervinca;
+            border-color: $gosblue;
+        }
+        .is-hover.is-checked & {
+            &::after {
+                background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='15' height='15' rx='1.5' fill='%231D5DEB' stroke='white'/%3E%3Cpath d='M3.99942 7.59823L7.27718 10.876L12.8754 5.27776' stroke='white'/%3E%3C/svg%3E%0A");
+            }
+            border-color: $active-item;
+            background-color: $white;
+        }
+    }
+    &__label {
+        cursor: pointer;
+        display: block;
+        font-size: 16px;
+        line-height: 24px;
+        margin-left: $base-gutter * 2;
+    }
+    &__input {
+        border: 0;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+        white-space: nowrap;
+    }
+    &__error-message {
+        display: block;
+        font-size: 16px;
+        line-height: 24px;
+        .is-error & {
+            color: $tela-rossa;
+            margin: 0;
+            margin-bottom: calc($base-gutter / 2);
+        }
+    }
+    &-group {
+        display: flex;
+        flex-direction: column;
+        &__title {
+            color: $summer-night;
+            display: block;
+            font-size: 16px;
+            line-height: 24px;
+            margin: 0;
+        }
+        &__helper {
+            color: $text-helper;
+            display: block;
+            font-size: 14px;
+            line-height: 20px;
+            margin: 0;
+            margin-bottom: $base-gutter * 1.5;
+        }
+        &__list {
+            display: flex;
+            flex-direction: column;
+        }
+        &__item {
+            & + & { margin-top: $base-gutter * 1.5; }
+        }
+    }
+}

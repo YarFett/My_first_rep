@@ -1,0 +1,30 @@
+.cb-sticker {
+    box-sizing: border-box;
+    border:  2px solid transparent;
+    border-radius: math.div($base-gutter, 2);
+    color: $summer-night;
+    display: inline-block;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    &--small {
+        font-size: 14px;
+        line-height: 20px;
+        padding: 0 $base-gutter * 0.75;
+    }
+    &--normal {
+        font-size: 16px;
+        line-height: 24px;
+        border-radius: $base-gutter;
+        padding: math.div($base-gutter, 4) $base-gutter * 1.75;
+    }
+    &--stroke {
+        border-color: $giallo-brillante;
+    }
+    &--fill {
+        background-color: $giallo-brillante;
+    }
+    &--inversion {
+        color: $white;
+    }
+}

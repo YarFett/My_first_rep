@@ -1,0 +1,73 @@
+@import "../../UI-Kit/variables/cb-variables";
+
+.dialogue {
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: opacity 0.5s;
+    z-index: 200;
+    &__backdrop {
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        left: 0;
+        opacity: 1;
+        position: fixed;
+        right: 0;
+        top: 0;
+        transition: opacity 0.5s;
+        z-index: 200;
+        cursor: pointer;
+    }
+    &__card {
+        background-color: $white;
+        box-sizing: border-box;
+        border-radius: $base-gutter * 1.5;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+        max-height: calc(100vh - $base-gutter * 16);
+        left: 50%;
+        position: absolute;
+        padding: $base-gutter * 4;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: $base-gutter * 88;
+        z-index: 500;
+        &-header {
+            align-items: center;
+            box-sizing: border-box;
+            border-bottom: 1px solid $bg-disable;
+            color: $gosblue;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: $base-gutter * 4;
+            &-title {
+              color: $summer-night;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 32px;
+                margin: 0;
+                margin-right: $base-gutter;
+            }
+        }
+        &-body {
+            box-sizing: border-box;
+            overflow: auto;
+            padding: $base-gutter * 4 0 0 0;
+        }
+        &-footer {
+            box-sizing: border-box;
+            border-top: 1px solid $bg-disable;
+            column-gap: $base-gutter * 2;
+            display: flex;
+            padding-top: $base-gutter * 4;
+        }
+    }
+    transform: scale(0);
+}
+.dialogue.active{
+    transform: scale(1);
+}

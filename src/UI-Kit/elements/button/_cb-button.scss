@@ -1,0 +1,98 @@
+.cb {
+    &-buttonsearch {
+        align-items: center;
+        background-color: $white;
+        border: 2px solid $white;
+        border-radius: $base-gutter;
+        color: $white;
+        cursor: pointer;
+        display: inline-flex;
+        font-family: 'Lato', 'Arial', sans-serif;
+        font-size: 12px;
+        justify-content: center;
+        line-height: 24px;
+        min-width: $base-gutter * 14;
+        padding: $base-gutter * 1.5 $base-gutter * 2;
+        text-align: center;
+        white-space: nowrap;
+        &:hover {
+            background-color: $active-item;
+            border-color: $active-item;
+        }
+        &:active {
+            background-color: $pulsante-premuto;
+            border-color: $pulsante-premuto;
+        }
+        &.is {
+            &-disabled {
+                background-color: $pervinca;
+                border-color: $pervinca;
+                color: $telegrey-scuro;
+                pointer-events: none;
+                //user-select: none;
+            }
+        }
+        &-contour {
+            background-color: $white;
+            color: $gosblue;
+            &:hover {
+                background-color: $white;
+                border-color: $active-item;
+                color: $active-item;
+            }
+            &:active {
+                background-color: $white;
+                border-color: $pulsante-premuto;
+                color: $pulsante-premuto;
+            }
+        }
+    }
+    &-button {
+        align-items: center;
+        background-color: $gosblue;
+        border: 2px solid $gosblue;
+        border-radius: $base-gutter;
+        color: $white;
+        cursor: pointer;
+        display: inline-flex;
+        font-family: 'Lato', 'Arial', sans-serif;
+        font-size: 16px;
+        justify-content: center;
+        line-height: 24px;
+        min-width: $base-gutter * 19;
+        padding: $base-gutter * 1.5 $base-gutter * 3;
+        text-align: center;
+        white-space: nowrap;
+        &:hover {
+            background-color: $active-item;
+            border-color: $active-item;
+        }
+        &:active {
+            background-color: $pulsante-premuto;
+            border-color: $pulsante-premuto;
+        }
+        &.is {
+            &-disabled {
+                background-color: $pervinca;
+                border-color: $pervinca;
+                color: $telegrey-scuro;
+                pointer-events: none;
+                //user-select: none;
+            }
+        }
+        &-contour {
+            background-color: $white;
+            color: $gosblue;
+            &:hover {
+                background-color: $white;
+                border-color: $active-item;
+                color: $active-item;
+            }
+            &:active {
+                background-color: $white;
+                border-color: $pulsante-premuto;
+                color: $pulsante-premuto;
+            }
+        }
+    }
+}

@@ -1,0 +1,293 @@
+@import "../../UI-Kit/variables/_cb-variables.scss";
+
+.is-default {
+  border: 2px dashed $bg-disable;
+  padding: 18px 22px 10px 22px;
+  background-color: transparent;
+  box-shadow: none;
+  .cb-card__header,
+  .cb-card__status {
+    padding: 0;
+
+  }
+  .cb-card__status {
+    background-color: transparent;
+    color: $text-helper;
+  }
+}
+
+.order {
+  &__container {
+    padding-top: $base-gutter * 12;
+    padding-bottom: $base-gutter * 12;
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    row-gap: $base-gutter * 4;
+    margin-bottom: $base-gutter * 6;
+  }
+  &__link-back {
+    box-sizing: border-box;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.47115 11.4695L13.9711 6L15.0289 7.06361L10.0636 12.0013L15.0289 16.9389L13.9711 18.0025L8.47115 12.5331C8.32959 12.3923 8.25 12.2009 8.25 12.0013C8.25 11.8016 8.32959 11.6102 8.47115 11.4695Z' fill='%230D4CD3'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    color: $gosblue;
+    padding-left: $base-gutter * 3;
+    text-decoration: none;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    top: -$base-gutter * 6;
+  }
+  &__title {
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px;
+    margin: 0;
+  }
+  &__inner {
+    column-gap: $base-gutter * 4;
+    display: grid;
+    grid-template-columns: $base-gutter * 113 1fr;
+    margin-bottom: $base-gutter * 5;
+  }
+  &__card {
+    background-color: $white;
+    border-radius: $base-gutter * 1.5;
+    box-shadow: 0px 1px 4px #E3EBFC;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    row-gap: $base-gutter * 2;
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      padding: $base-gutter * 2 $base-gutter * 4;
+      .is-positive & {
+        background-color: rgba($nephritis, 0.45);
+      }
+      .is-negative & {
+        background-color: rgba($gosred, 0.2);
+      }
+    }
+    &-state {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0;
+    }
+    &-action {
+      column-gap: $base-gutter * 3;
+      display: flex;
+    }
+    &-link {
+      color: $gosblue;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    &-body {
+      display: flex;
+      flex-direction: column;
+      padding: 0 $base-gutter * 4 $base-gutter * 3 $base-gutter * 4;
+      row-gap: $base-gutter * 3;
+    }
+    &-headline {
+      color: $gosblue;
+      display: flex;
+      justify-content: space-between;
+    }
+    &-title {
+      color: $summer-night;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 28px;
+      margin: 0;
+    }
+    &-info {
+      border-bottom: 1px solid $pervinca;
+      column-gap: $base-gutter * 8;
+      display: flex;
+      flex-wrap: wrap;
+      padding-bottom: $base-gutter * 3;
+      row-gap: $base-gutter * 3;
+    }
+    &-col {
+      display: flex;
+      flex-direction: column;
+      row-gap: $base-gutter;
+    }
+    &-label {
+      color: $text-helper;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0;
+    }
+    &-value {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0;
+    }
+  }
+  &__files {
+    display: flex;
+    flex-direction: column;
+    row-gap: $base-gutter * 2;
+    width: $base-gutter * 69;
+    &-text {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0;
+    }
+    &-list {
+      display: flex;
+      flex-direction: column;
+      row-gap: $base-gutter;
+    }
+    &-item {
+      column-gap: $base-gutter * 2;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      padding: $base-gutter * 2 0;
+    }
+    &-col {
+      display: flex;
+      flex-direction: column;
+      row-gap: $base-gutter;
+    }
+    &-title {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0;
+    }
+    &-size {
+      color: $text-helper;
+    }
+    &-link {
+      color: $gosblue;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    &-action {
+      column-gap: $base-gutter;
+      display: flex;
+    }
+    &-row {
+      display: flex;
+      justify-content: center;
+      padding-bottom: $base-gutter;
+    }
+  }
+  &__aside {
+    display: flex;
+    flex-direction: column;
+    row-gap: $base-gutter * 4;
+  }
+  &__helper {
+    border-radius: $base-gutter;
+    box-sizing: border-box;
+    border: 2px solid $mandorle-pelate;
+    background-color: $white;
+    padding: $base-gutter * 1.5;
+    &-title {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 20px;
+      margin: 0;
+      margin-bottom: $base-gutter;
+    }
+    &-text {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      margin: 0;
+      margin-bottom: $base-gutter * 1.5;
+    }
+    &-link {
+      color: $gosblue;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+  &__history {
+    display: flex;
+    flex-direction: column;
+    row-gap: $base-gutter * 1.5;
+    margin-left: -43px;
+    &-item {
+      column-gap: $base-gutter * 2;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      &:last-child {
+        .order__history-wrapper {
+          &::after {
+            content: none;
+          }
+        }
+        .order__history-cards {
+          padding-bottom: 0;
+        }
+      }
+    }
+    &-wrapper {
+      align-items: center;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      row-gap: $base-gutter * 1.5;
+      &::after {
+        content: "";
+        border-left: 2px dashed $tagline;
+        flex-basis: 100%;
+      }
+    }
+    &-step {
+      align-items: center;
+      border-radius: 100%;
+      border: 2px solid $blu-digitale;
+      box-sizing: border-box;
+      color: $blu-digitale;
+      display: flex;
+      flex-shrink: 0;
+      font-weight: 700;
+      font-size: 14px;
+      height: $base-gutter * 3.5;
+      justify-content: center;
+      line-height: 20px;
+      margin: 0;
+      width: $base-gutter * 3.5;
+      .is-done & {
+        background-color: $blu-digitale;
+        color: $white;
+      }
+    }
+    &-inner {
+      display: flex;
+      flex-direction: column;
+      row-gap: $base-gutter * 3;
+    }
+    &-title {
+      margin: 0 0 -10px 64px;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 32px;
+    }
+    &-title_check_status {
+      margin: 0;
+    }
+    &-cards {
+      align-items: flex-start;
+      display: grid;
+      grid-template-columns: repeat(3, $base-gutter * 48);
+      gap: $base-gutter * 3;
+      padding-bottom: $base-gutter * 4;
+    }
+  }
+}

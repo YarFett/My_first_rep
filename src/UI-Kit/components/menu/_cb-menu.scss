@@ -1,0 +1,45 @@
+.cb {
+    &-menu {
+        align-items: flex-start;
+        background-color: $white;
+        box-sizing: border-box;
+        box-shadow: 0px $base-gutter * 1.5 $base-gutter * 4 rgba($summer-night, 0.18);
+        border-radius: $base-gutter * 1.5;
+        display: flex;
+        flex-direction: column;
+        min-width: $base-gutter * 30;
+        padding: $base-gutter * 3 $base-gutter * 7 $base-gutter * 3 $base-gutter * 3;
+        position: absolute;
+        right: -$base-gutter * 3;
+        top: -$base-gutter * 3;
+        &__link {
+            color: $gosblue;
+            display: block;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: $base-gutter * 2;
+            text-decoration: none;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+        &__button-close {
+            border: none;
+            box-sizing: border-box;
+            background-color: transparent;
+            height: $base-gutter * 3;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            right: $base-gutter * 3;
+            top: $base-gutter * 3;
+            width: $base-gutter * 3;
+        }
+    }
+    &-icon {
+        &-close {
+            color: $gosblue;
+        }
+    }
+}

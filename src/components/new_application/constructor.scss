@@ -1,0 +1,348 @@
+@import "../../UI-Kit/variables/cb-variables";
+
+.constructor {
+  display: flex;
+  flex-direction: column;
+  row-gap: $base-gutter * 3;
+  width: $base-gutter * 88;
+  &__header {
+    align-self: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    row-gap: $base-gutter * 2;
+  }
+  &__title {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+  }
+  &__subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  &__link {
+    cursor: pointer;
+    color: $gosblue;
+    text-decoration: none;
+  }
+  &__link-back {
+    box-sizing: border-box;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.47115 11.4695L13.9711 6L15.0289 7.06361L10.0636 12.0013L15.0289 16.9389L13.9711 18.0025L8.47115 12.5331C8.32959 12.3923 8.25 12.2009 8.25 12.0013C8.25 11.8016 8.32959 11.6102 8.47115 11.4695Z' fill='%230D4CD3'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    color: $gosblue;
+    padding-left: $base-gutter * 3;
+    text-decoration: none;
+    cursor: pointer;
+    left: 0;
+    position: relative;
+    top: -$base-gutter * 1;
+  }
+  &__card {
+    box-sizing: border-box;
+    background-color: $white;
+    box-shadow: 0px 1px 4px #E3EBFC, 0px 6px 16px rgba(230, 235, 245, 0.8);
+    border-radius: $base-gutter * 1.5;
+    display: flex;
+    flex-direction: column;
+    row-gap: $base-gutter * 4;
+    margin-bottom: $base-gutter * 2;
+    padding: $base-gutter * 4;
+    width: $base-gutter * 88;
+    &-item {
+      display: flex;
+      flex-direction: column;
+      row-gap: $base-gutter * 2;
+      &-title {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0;
+      }
+    }
+    &-row {
+      display: grid;
+      column-gap: $base-gutter * 3;
+      &.is-inn {
+        grid-template-columns: $base-gutter * 24 $base-gutter * 31;
+      }
+      &.is-password {
+        grid-template-columns: $base-gutter * 16.5 $base-gutter * 20 auto;
+      }
+      &.is-cp {
+        grid-template-columns: 1.5fr 2fr;
+      }
+      &.is-2fr-1fr {
+        grid-template-columns: 2fr 1fr;
+      }
+      &.is-2fr-1fr-1fr {
+        grid-template-columns: 2fr 1.5fr 1.5fr;
+      }
+      &.is-1fr-1fr-1fr {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      &.is-small {
+        grid-template-columns: $base-gutter * 21;
+      }
+      &-text-helper {
+        color: $text-helper;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        margin: 0;
+        margin-bottom: $base-gutter * 2;
+      }
+      &-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0;
+        margin-bottom: $base-gutter;
+      }
+    }
+  }
+  &__inner {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: $base-gutter * 3;
+  }
+  &__helper {
+    display: block;
+    &-title {
+      color: $text-helper;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      margin: 0;
+    }
+    &-list {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      margin: 0;
+      margin-top: $base-gutter * 2;
+      padding: 0;
+      row-gap: $base-gutter * 1.5;
+    }
+    &-item {
+      padding-left: 20px;
+      position: relative;
+      &::before {
+        content: "";
+        background-color: $blu-digitale;
+        border-radius: 50%;
+        height: $base-gutter;
+        left: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: $base-gutter;
+      }
+    }
+    &-card {
+      background-color: $osso-grigio;
+      border-radius: $base-gutter * 1.5;
+      display: flex;
+      flex-direction: column;
+      row-gap: $base-gutter * 1.25;
+      margin-top: $base-gutter * 3;
+      padding: $base-gutter * 2;
+      &-title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+        margin: 0;
+      }
+      &-text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        margin: 0;
+      }
+    }
+  }
+  &__description {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    &-item {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        justify-items: start;
+        margin-bottom: $base-gutter * 2;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &.is-link {
+          grid-template-columns: $base-gutter * 37 1fr;
+        }
+    }
+    &-label {
+        align-items: baseline;
+        color: $text-helper;
+        display: flex;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        margin: 0;
+        width: $base-gutter * 37;
+        &::before {
+            content: "";
+            border-bottom: 1px dashed #D9D9D9;
+            flex-grow: 1;
+            order: 1;
+            margin: 0 16px;
+        }
+    }
+    &-value {
+        color: #0B1F33;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        margin: 0;
+        & + & { margin-top: $base-gutter * 3 }
+        &:last-child {
+          grid-column: 2/-1;
+        }
+        &-link {
+            color: $gosblue;
+            text-decoration: none;
+        }
+        &-item {
+            margin-right: $base-gutter * 0.5;
+            &::after {
+                content: "|";
+                margin-left: $base-gutter * 0.5;
+            }
+            &:last-child {
+                margin-right: 0;
+                &::after {
+                    content: none;
+                }
+            }
+            &--link {
+                color: $gosblue;
+                text-decoration: none;
+            }
+        }
+    }
+    &-link {
+      align-self: start;
+      cursor: pointer;
+      grid-column: 2/-1;
+      color: $gosblue;
+      text-decoration: none;
+    }
+    &-sublist {
+      list-style-type: disc;
+      grid-column: 2 / -1;
+      margin: 0;
+      margin-top: $base-gutter * 3;
+      padding-left: $base-gutter * 3;
+      &.is-file-list {
+        display: flex;
+        flex-direction: column;
+        row-gap: $base-gutter * 2;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    &-subitem {
+      align-items: start;
+      display: flex;
+      column-gap: $base-gutter * 2;
+      &-file {
+        color: $gosblue;
+        cursor: pointer;
+        text-decoration: none;
+      }
+    }
+  }
+  &__index {
+    &-label {
+      color: $summer-night;
+      display: block;
+      font-family: 'Lato', 'Arial', sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      margin: 0;
+      margin-bottom: $base-gutter * 0.5;
+    }
+    &-list {
+      display: flex;
+      column-gap: $base-gutter * 3;
+    }
+    &-item {
+      align-items: center;
+      background-color: $azzurro-alice;
+      border-radius: $base-gutter;
+      box-sizing: border-box;
+      color: $active-item;
+      cursor: pointer;
+      display: flex;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0;
+      height: $base-gutter * 5;
+      padding: 0 $base-gutter * 2;
+      &.is-active {
+        background-color: $blu-digitale;
+        color: $white;
+      }
+    }
+  }
+  &__row {
+    align-items: center;
+    column-gap: $base-gutter * 2;
+    color: $gosblue;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+  }
+  &__file {
+    color: $gosblue;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    justify-self: start;
+    text-decoration: none;
+  }
+  &__request {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    row-gap: $base-gutter * 4;
+    width: $base-gutter * 134;
+    &-body {
+      box-sizing: border-box;
+      background-color: $white;
+      box-shadow: 0px 1px 4px #E3EBFC, 0px 6px 16px rgba(230, 235, 245, 0.8);
+      border-radius: $base-gutter * 1.5;
+      display: flex;
+      flex-direction: column;
+      row-gap: $base-gutter * 4;
+      padding: $base-gutter * 4;
+    }
+    &-item {
+      display: flex;
+      flex-direction: column;
+      row-gap: $base-gutter * 2;
+      &-title {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        margin: 0;
+      }
+    }
+  }
+}

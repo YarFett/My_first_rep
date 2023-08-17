@@ -1,0 +1,13 @@
+.select-box__label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #0B1F33;
+}
+
+@media (max-width: 767px) {
+  .select-box__label {
+    font-weight: 700;
+  }
+}

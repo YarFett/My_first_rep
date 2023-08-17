@@ -1,0 +1,55 @@
+@import "../../UI-Kit/variables/cb-variables";
+// @import '../../UI-Kit/elements/button/_cb-button.scss';
+// @import '../../UI-Kit/elements/search-field/_cb-search-field.scss';
+
+.page-header {
+  background-color: $white;
+  box-shadow: 0 2px 2px rgba(157, 172, 207, 0.08);
+
+  &__container {
+    display: grid;
+    align-items: center;
+    column-gap: $base-gutter * 3;
+    flex-grow: 1;
+    grid-template-columns: 1fr auto auto auto;
+    height: 76px;
+  }
+
+  &__site-navigation {
+    column-gap: $base-gutter * 3;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &-link {
+      color: $gosblue;
+      display: block;
+      text-decoration: none;
+    }
+  }
+
+  &__icon-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+
+    &-item {
+      margin-right: $base-gutter;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &-link {
+      color: $gosblue;
+      display: block;
+      text-decoration: none;
+    }
+  }
+}

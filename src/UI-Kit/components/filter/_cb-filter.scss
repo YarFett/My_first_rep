@@ -1,0 +1,67 @@
+.cb {
+    &-filter {
+        background-color: $white;
+        border-radius: $base-gutter * 1.5;
+        box-sizing: border-box;
+        padding: 16px;
+        width: $base-gutter * 35;
+        & > * {
+            margin: 0;
+            margin-top: $base-gutter * 3;
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+        &__headline {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 24px;
+            margin: 0;
+            margin-right: $base-gutter * 0.75;
+        }
+        &__btn-close {
+            border: none;
+            box-sizing: border-box;
+            background-color: transparent;
+            height: $base-gutter * 3;
+            margin: 0;
+            padding: 0;
+            width: $base-gutter * 3;
+        }
+        &__button {
+            border: none;
+            box-sizing: border-box;
+            background-color: transparent;
+            cursor: pointer;
+            color: $gosblue;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            margin: 0;
+            padding: 0;
+            width: auto;
+        }
+        &__item {
+            & > * {
+                width: 100%;
+            }
+            &--buttons {
+                display: flex;
+                justify-content: space-between;
+                & > * {
+                    width: auto;
+                }
+            }
+        }
+    }
+    &-icon {
+        &-close {
+            color: $gosblue;
+        }
+    }
+}

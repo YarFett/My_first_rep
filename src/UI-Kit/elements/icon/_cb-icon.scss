@@ -1,0 +1,28 @@
+.cb {
+    &-icon {
+        box-sizing: border-box;
+        cursor: pointer;
+        display: block;
+        font-size: 0;
+        position: relative;
+        &.is {
+            &-disabled {};
+            &-loading {};
+            &-error {};
+        }
+        & + & { margin-right: $base-gutter; }
+        &__size-16 {
+            height: $base-gutter * 2;
+            width: $base-gutter * 2;
+        }
+        &__size-24 {
+            height: $base-gutter * 3;
+            width: $base-gutter * 3;
+        }
+        &__size-32 {
+            height: $base-gutter * 4;
+            width: $base-gutter * 4;
+        }
+    }
+}
+
