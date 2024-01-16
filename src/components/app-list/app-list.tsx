@@ -19,23 +19,6 @@ function AppList() {
   const [service] = useContext(SearchContext)
   const [serviceNew, setServiceNew] = useState<ServiceCard[]>()
 
-  // useEffect(() => {
-  //     async function fetchData() {
-  //         const response = await fetch(`http://localhost:8000/api/services/service/?page=${1}&page_size=${10}`);
-  //         const data = await response.json();
-  //         setServiceFromNewApp(data);
-  //     }
-  //     fetchData();
-  // }, [])
-  // useEffect(() => {
-  //   axios.get(`/services/service/?search=`)
-  //     .then(response =>
-  //         setServiceNew(response.data)
-  //         )
-  //     .catch(error => console.log(error))
-  // }, []);
-
-
   return (
     <table className="app-list">
       <thead>
